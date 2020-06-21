@@ -11,6 +11,7 @@ driver.maximize_window()
 driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
 driver.implicitly_wait(4)
 
+# declare variables
 bestsellers_text = (By.CSS_SELECTOR, "div#zg_banner_text")
 bestsellers_links = (By.CSS_SELECTOR, "a[href*='zg_bs_tab']")
 
