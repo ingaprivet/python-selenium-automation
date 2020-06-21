@@ -1,4 +1,4 @@
-# Created by ingabukhvalova at 6/19/20
+# Created by ingabukhvalova at 6/18/20
 Feature: Test Scenarios for BestSellers page
 
   Scenario: User can open BestSeller page and see
