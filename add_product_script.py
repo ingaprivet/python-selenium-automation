@@ -31,16 +31,15 @@ driver.find_element_by_xpath('//input[@id="add-to-cart-button"]').click()
 
 
 
-
 try:
     WebDriverWait(driver, 3).until(EC.new_window_is_opened,
-                                   'Timed out waiting for PA creation ' +
-                                   'confirmation popup to appear.')
+                                   'Timed out waiting for popup window to appear.')
     alert = driver.switch_to.window()
     alert.dismiss()
     print("alert accepted")
 except TimeoutException:
     print("no alert")
+
 
 
 #verify and quit
