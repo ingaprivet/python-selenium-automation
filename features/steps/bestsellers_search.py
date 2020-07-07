@@ -15,7 +15,6 @@ BESTSELLERS_TEXT = (By.CSS_SELECTOR, "div#zg_banner_text")
 TOP_LINKS = (By.CSS_SELECTOR, '#zg_tabs a')
 
 
-
 @given('Open amazon BestSellers page')
 def open_amazon(context):
     #context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
@@ -75,15 +74,15 @@ def click_open_new_page(context):
 @then('Verify each top link opens a new page') #version from Lana
 def click_open_new_page(context):
 
-    #for x in range(len(top_links)):
-    for x in range(5):
+    for x in range(len(context.driver.find_elements(*TOP_LINKS))):
 
         link_to_click = context.driver.find_elements(*TOP_LINKS)[x]
         #link_text = link_to_click_text
         print("link_to_click = " + str(link_to_click))
         print("x = " + str(x))
         link_to_click.click()
-        #new_text = context.driver.find_elements(*BESTSELLERS_TEXT).text
+        new_text = context.driver.find_elements(*BESTSELLERS_TEXT).text
+        print("new_text = " + str(new_text))
         #assert link_text in new_text, f'Expected {link_text} to be in {new_text}'
         #new_text = context.driver.find_element(*HEADER)
     
