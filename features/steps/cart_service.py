@@ -15,5 +15,3 @@ def click_cart_icon(context):
 @then('Verify {search_text} text present')
 def verify_found_results_text(context, search_text):
     context.app.cart_services.verify_found_results_text(search_text)
-
-
