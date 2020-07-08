@@ -1,4 +1,5 @@
-Feature: Amazon main page popups
+# Created by i bukhvalova
+Feature: Amazon main page popup
 
   Scenario: Sign in popup appears and then disappers
     Given Open Amazon page
