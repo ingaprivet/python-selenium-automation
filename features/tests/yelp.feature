@@ -1,4 +1,4 @@
-# Created by ingabukhvalova at 7/1/20
+# Created by ingabukhvalova
 Feature: Window handling
 
   Scenario: Company's website is open in a new tab
