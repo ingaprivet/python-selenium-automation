@@ -1,4 +1,4 @@
-# Modifications for homework 7
+# Modifications for Homework 7
 
 Feature: Test for cart functionality
 
