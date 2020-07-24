@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -8,6 +9,7 @@ class Page:
         self.driver = driver
         self.base_url = 'https://www.amazon.com/'
         self.wait = WebDriverWait(self.driver, 10)
+        self.action = ActionChains(self.driver)
 
     def open_page(self, url=''):
         self.driver.get(self.base_url + url)
@@ -36,3 +38,4 @@ class Page:
     def verify_text(self, expected_text: str, *locator):
         actual_text = self.driver.find_element(*locator).text
         assert expected_text == actual_text, f'Expected text {expected_text}, but got {actual_text}'
+        print(f'Expected text: ' + expected_text + f' is equal to the actual text: ' + actual_text)
